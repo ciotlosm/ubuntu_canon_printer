@@ -5,6 +5,7 @@
 #http://help.ubuntu.ru/wiki/canon_capt
 #http://forum.ubuntu.ru/index.php?topic=189049.0
 #Translated into English and modified by @hieplpvip
+#Updated some bits to work for Mint 22.2 and Ubuntu 24.04 (does not work on 25.xx due to libxml2 breaking change)
 ##################################################
 
 #Check if we are running as root
@@ -28,14 +29,14 @@ DRIVER_VERSION='2.71-1'
 DRIVER_VERSION_COMMON='3.21-1'
 
 #Links to driver packages
-declare -A URL_DRIVER=([amd64_common]='https://raw.githubusercontent.com/hieplpvip/ubuntu_canon_printer/master/Packages/cndrvcups-common_3.21-1_amd64.deb' \
-[amd64_capt]='https://raw.githubusercontent.com/hieplpvip/ubuntu_canon_printer/master/Packages/cndrvcups-capt_2.71-1_amd64.deb' \
-[i386_common]='https://raw.githubusercontent.com/hieplpvip/ubuntu_canon_printer/master/Packages/cndrvcups-common_3.21-1_i386.deb' \
-[i386_capt]='https://raw.githubusercontent.com/hieplpvip/ubuntu_canon_printer/master/Packages/cndrvcups-capt_2.71-1_i386.deb')
+declare -A URL_DRIVER=([amd64_common]='https://raw.githubusercontent.com/ciotlosm/ubuntu_canon_printer/master/Packages/cndrvcups-common_3.21-1_amd64.deb' \
+[amd64_capt]='https://raw.githubusercontent.com/ciotlosm/ubuntu_canon_printer/master/Packages/cndrvcups-capt_2.71-1_amd64.deb' \
+[i386_common]='https://raw.githubusercontent.com/ciotlosm/ubuntu_canon_printer/master/Packages/cndrvcups-common_3.21-1_i386.deb' \
+[i386_capt]='https://raw.githubusercontent.com/ciotlosm/ubuntu_canon_printer/master/Packages/cndrvcups-capt_2.71-1_i386.deb')
 
 #Links to autoshutdowntool
-declare -A URL_ASDT=([amd64]='https://raw.githubusercontent.com/hieplpvip/ubuntu_canon_printer/master/Packages/autoshutdowntool_1.00-1_amd64_deb.tar.gz' \
-[i386]='https://raw.githubusercontent.com/hieplpvip/ubuntu_canon_printer/master/Packages/autoshutdowntool_1.00-1_i386_deb.tar.gz')
+declare -A URL_ASDT=([amd64]='https://raw.githubusercontent.com/ciotlosm/ubuntu_canon_printer/master/Packages/autoshutdowntool_1.00-1_amd64_deb.tar.gz' \
+[i386]='https://raw.githubusercontent.com/ciotlosm/ubuntu_canon_printer/master/Packages/autoshutdowntool_1.00-1_i386_deb.tar.gz')
 
 #ppd files and printer models mapping
 declare -A LASERSHOT=([LBP-810]=1120 [LBP1120]=1120 [LBP1210]=1210 \
