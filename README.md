@@ -1,5 +1,8 @@
-## Canon LBP printers drivers installer for Ubuntu
-Script for installing the Linux CAPT Printer Driver for Canon LBP printers on Ubuntu (both 32-bit and 64-bit)
+## Canon LBP printers drivers installer for Ubuntu & Mint
+Script for installing the Linux CAPT Printer Driver for Canon LBP printers on Ubuntu (up to 24.04) & Mint (up to 22.2) (both 32-bit and 64-bit)
+
+⚠️ Ubuntu 25.xx introduces a breaking change to libxml2 that breaks the driver install.
+
 ### Install
 ```
 wget https://github.com/ciotlosm/ubuntu_canon_printer/raw/master/canon_lbp_setup.sh
