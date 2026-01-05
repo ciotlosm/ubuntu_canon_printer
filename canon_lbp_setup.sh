@@ -15,10 +15,12 @@ LOGIN_USER=$(logname)
 [ -z "$LOGIN_USER" ] && LOGIN_USER=$(who | head -1 | awk '{print $1}')
 
 #Load the file containing the path to the desktop
-if [ -f ~/.config/user-dirs.dirs ]; then
-	source ~/.config/user-dirs.dirs
+USER_HOME=$(getent passwd "$LOGIN_USER" | cut -d: -f6)
+
+if [ -f "$USER_HOME/.config/user-dirs.dirs" ]; then
+    source "$USER_HOME/.config/user-dirs.dirs"
 else
-	XDG_DESKTOP_DIR="$HOME/Desktop"
+    XDG_DESKTOP_DIR="$USER_HOME/Desktop"
 fi
 
 #Driver version
